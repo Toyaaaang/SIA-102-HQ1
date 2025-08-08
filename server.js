@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.send(`
@@ -20,12 +20,13 @@ app.get('/', (req, res) => {
                     margin: 0;
                 }
                 .card {
-                    background: #fff;
+                    background: #c9c9c9ff;
                     border-radius: 0.75rem;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 1.07);
                     padding: 2rem 3rem;
                     text-align: center;
                     font-family: 'Inter', sans-serif;
+                    margin: 20px;
                 }
                 .card h1 {
                     font-size: 2rem;
